@@ -1,3 +1,4 @@
+/** @jsxImportSource frog/jsx */
 import { Frog, Button } from 'frog';
 import { handle } from 'frog/vercel';
 
@@ -8,7 +9,14 @@ title: 'Base Predict',
 
 app.frame('/', (c) => {
 return c.res({
-image: 'https://emerald-glaring-marlin-155.mythic.be/api/og?title=Base%20Predict&description=Will%20ETH%20hit%20$4000?',
+image: (
+<div style={{ color: 'white', display: 'flex', flexDirection: 'column', fontSize: 60, background: 'linear-gradient(to right, #0052ff, #00a3ff)', width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
+<p>Will ETH hit $4000 this month?</p>
+<div style={{ display: 'flex', gap: '20px', fontSize: 30 }}>
+<span>Market ID: 0</span>
+</div>
+</div>
+),
 intents: [
 <Button.Transaction target="/vote/yes">Bet YES (0.001 ETH)</Button.Transaction>,
 <Button.Transaction target="/vote/no">Bet NO (0.001 ETH)</Button.Transaction>,
@@ -34,7 +42,7 @@ abi: [
 }
 ],
 to: '0xB4085493f432B86DfE830Fed7CD94F05008671Db',
-value: '1000000000000000',
+value: 1000000000000000n,
 },
 });
 });
