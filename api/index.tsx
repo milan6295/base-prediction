@@ -1,3 +1,4 @@
+/** @jsxImportSource frog/jsx */
 import { Frog, Button } from 'frog';
 import { handle } from 'frog/vercel';
 
@@ -25,7 +26,6 @@ intents: [
 
 app.transaction('/vote/:side', (c) => {
 const side = c.req.param('side');
-const isYes = side === 'yes';
 
 return c.res({
 chainId: 'eip155:8453',
@@ -44,7 +44,7 @@ abi: [
 }
 ],
 to: '0xB4085493f432B86DfE830Fed7CD94F05008671Db',
-value: '1000000000000000',
+value: 1000000000000000n,
 },
 });
 });
