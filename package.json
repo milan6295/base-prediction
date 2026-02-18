@@ -1,11 +1,6 @@
 {
 "name": "base-prediction",
 "version": "1.0.0",
-"scripts": {
-"dev": "frog dev",
-"build": "frog build",
-"start": "frog start"
-},
 "dependencies": {
 "frog": "^0.15.7",
 "hono": "^4.4.7",
