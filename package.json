@@ -3,7 +3,7 @@
 "version": "1.0.0",
 "type": "module",
 "scripts": {
-"start": "node --loader ts-node/esm index.tsx"
+"start": "node index.js"
 },
 "dependencies": {
 "frog": "latest",
@@ -11,8 +11,6 @@
 "@hono/node-server": "latest",
 "viem": "latest",
 "react": "latest",
-"react-dom": "latest",
-"ts-node": "latest",
-"typescript": "latest"
+"react-dom": "latest"
 }
 }
