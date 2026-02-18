@@ -9,8 +9,6 @@
 "frog": "latest",
 "hono": "latest",
 "@hono/node-server": "latest",
-"viem": "latest",
-"react": "latest",
-"react-dom": "latest"
+"viem": "latest"
 }
 }
