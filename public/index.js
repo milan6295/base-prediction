@@ -1,4 +1,3 @@
-/** @jsxImportSource frog/jsx */
 import { Frog, Button } from 'frog';
 import { serve } from '@hono/node-server';
 
@@ -9,7 +8,7 @@ title: 'Base Predict',
 app.frame('/', (c) => {
 return c.res({
 image: (
-<div style={{ color: 'white', display: 'flex', flexDirection: 'column', fontSize: 60, background: 'blue', width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
+<div style={{ color: 'white', display: 'flex', flexDirection: 'column', fontSize: 60, background: '#0052ff', width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
 <p>Will ETH hit $4000?</p>
 </div>
 ),
@@ -38,10 +37,11 @@ abi: [
 }
 ],
 to: '0xB4085493f432B86DfE830Fed7CD94F05008671Db',
-value: 1000000000000000n,
+value: '1000000000000000',
 },
 });
 });
 
 const port = Number(process.env.PORT) || 3000;
+console.log(`Server is running on port ${port}`);
 serve({ fetch: app.fetch, port });
