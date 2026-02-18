@@ -3,8 +3,10 @@
 "version": "1.0.0",
 "type": "module",
 "dependencies": {
-"frog": "^0.15.7",
-"hono": "^4.4.7",
-"viem": "^2.13.1"
+"frog": "latest",
+"hono": "latest",
+"viem": "latest",
+"react": "latest",
+"react-dom": "latest"
 }
 }
