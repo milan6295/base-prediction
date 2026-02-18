@@ -2,11 +2,17 @@
 "name": "base-prediction",
 "version": "1.0.0",
 "type": "module",
+"scripts": {
+"start": "node --loader ts-node/esm index.tsx"
+},
 "dependencies": {
 "frog": "latest",
 "hono": "latest",
+"@hono/node-server": "latest",
 "viem": "latest",
 "react": "latest",
-"react-dom": "latest"
+"react-dom": "latest",
+"ts-node": "latest",
+"typescript": "latest"
 }
 }
