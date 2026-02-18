@@ -1,9 +1,10 @@
-import { Frog, Button } from 'frog';
-import { serve } from '@hono/node-server';
+/** @jsxImportSource frog/jsx */
+import { Frog, Button } from 'frog'
+import { serve } from '@hono/node-server'
 
 export const app = new Frog({
 title: 'Base Predict',
-});
+})
 
 app.frame('/', (c) => {
 return c.res({
@@ -16,8 +17,8 @@ intents: [
 <Button.Transaction target="/vote/yes">Bet YES</Button.Transaction>,
 <Button.Transaction target="/vote/no">Bet NO</Button.Transaction>,
 ],
-});
-});
+})
+})
 
 app.transaction('/vote/:side', (c) => {
 return c.res({
@@ -39,9 +40,9 @@ abi: [
 to: '0xB4085493f432B86DfE830Fed7CD94F05008671Db',
 value: '1000000000000000',
 },
-});
-});
+})
+})
 
-const port = Number(process.env.PORT) || 3000;
-console.log(`Server is running on port ${port}`);
-serve({ fetch: app.fetch, port });
+const port = Number(process.env.PORT) || 3000
+console.log(`Server is running on port ${port}`)
+serve({ fetch: app.fetch, port })
